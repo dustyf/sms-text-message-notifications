@@ -15,13 +15,13 @@ include_once( 'inc/post-types.php' );
  * Comment to send an SMS through Twilio
  */
 function smstmn_send_sms( $body, $to ) {
-	$url = 'https://api.twilio.com/2010-04-01/Accounts/AC1b3445f19805e8f2fb197f26021aaf22/SMS/Messages.json';
-	$from = '4142695400';
-	$sid = 'AC1b3445f19805e8f2fb197f26021aaf22';
-	$token = 'faa4253dd0e1d2534a0d0b77a3af69cd';
+	$url = 'https://api.twilio.com/2010-04-01/Accounts/xxxxxxx/SMS/Messages.json';
+	$from = '';
+	$sid = 'xxxxx';
+	$token = 'xxxxxx';
 	// Test Info Below
-	// $sid = 'AC3901183c16f1709d91f51f9c6bf8a7ea';
-	// $token = '0e8089eb77f9d6feeb74ac6a192d248e';
+	// $sid = 'xxxxxx';
+	// $token = 'xxxxxxx';
 	$args = array(
 		'headers' => array(
 			'Authorization' => 'Basic ' . base64_encode( $sid . ':' . $token )
